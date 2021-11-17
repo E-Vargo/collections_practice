@@ -39,12 +39,18 @@ def sum_array(array)
     x
 end
 
+#def add_s(array)
+#array.select do |i|
+#    if i == array[1]
+#        i
+#    else
+#        i << "s"
+#    end
+#end
+#end
+
 def add_s(array)
-array.select do |i|
-    if i == array[1]
-        i
-    else
-        i << "s"
-    end
-end
+
+array.each_with_index.collect{|element, index| index == 1 ? element : element << "s" }
+
 end
